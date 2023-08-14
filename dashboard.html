@@ -9,10 +9,38 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    
-  </header>
+  <main>
+    <section class="mt-12 px-8 flex justify-center gap-6 flex-col sm:flex-row max-w-[1100px] mx-auto">
+      <div class="w-full bg-rose-600 text-white flex flex-col gap-2 text-center p-6 rounded-lg">
+        <span class="text-2xl font-semibold">Total Deposit</span>
+        <span class="text-2xl font-semibold">$<span id="total-deposit">00</span></span>
+      </div>
+      <div class="w-full bg-teal-600 text-white flex flex-col gap-2 text-center p-6 rounded-lg">
+        <span class="text-2xl font-semibold">Total Withdraw</span>
+        <span class="text-2xl font-semibold">$<span id="total-withdraw">00</span></span>
+      </div>
+      <div class="w-full bg-purple-600 text-white flex flex-col gap-2 text-center p-6 rounded-lg">
+        <span class="text-2xl font-semibold">Total Balance</span>
+        <span class="text-2xl font-semibold">$<span id="total-balance">1240</span></span>
+      </div>
+    </section>
+
+    <section class="mt-12 px-8 py-12 bg-primary bg-opacity-5 ">
+      <div class="flex flex-col sm:flex-row gap-12 max-w-[1100px] mx-auto">
+        <form id="add-deposit" class="flex flex-col gap-4 w-full">
+          <label for="deposit-amount" class="text-xl font-semibold">Add Balance</label>
+          <input class="input" type="number" name="deposit" id="deposit-amount">
+          <input class="btn btn-primary mt-4" type="submit" value="Add Balance">
+        </form>
+        <form id="add-withdraw" class="flex flex-col gap-4 w-full">
+          <label for="withdraw-amount" class="text-xl font-semibold">Withdraw Balance</label>
+          <input class="input" type="number" name="withdraw-amount" id="withdraw-amount">
+          <input class="btn btn-primary mt-4" type="submit" value="Withdraw Balance">
+        </form>
+      </div>
+    </section>
+  </main>
   <!-- JavaScript -->
-  <script src="js/script.js"></script>
+  <script src="js/dashboard.js"></script>
 </body>
 </html>
