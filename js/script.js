@@ -1,6 +1,6 @@
 const loginInfo = {
-  email: "ashikujjamanhimel@gmail.com",
-  password: "Password&1234",
+  email: "user@gmail.com",
+  password: "1234",
 };
 
 const emailInput = document.getElementById("login-email");
@@ -23,4 +23,5 @@ document.getElementById("form").addEventListener("submit", function (event) {
   event.preventDefault();
 });
 
-console.log(location.href);
+console.log(loginInfo.email);
+console.log(loginInfo.password);
