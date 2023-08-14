@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +9,25 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <main class="min-h-screen flex justify-center items-center">
-    <form id="form" class="bg-white bg-opacity-5 text-white flex flex-col gap-2 w-full max-w-md p-8 mx-4 rounded-lg shadow-lg">
+    <form id="form"
+      class="bg-white bg-opacity-5 text-white flex flex-col gap-2 w-full max-w-md p-8 mx-4 rounded-lg shadow-lg">
       <h2 class="text-2xl font-semibold text-center mb-4">Login to your bank account</h2>
       <label for="login-email">Email Address</label>
       <input class="input mb-2" type="email" name="email" id="login-email" placeholder="Write your email" required>
       <label for="login-password">Password</label>
-      <input class="input mb-2" type="password" name="password" id="login-password" placeholder="Write your password" required>
-      <span id="form-massage" class="text-primary font-semibold text-[18px] hidden">Your email or password is incorrect !!!</span>
+      <input class="input mb-2" type="password" name="password" id="login-password" placeholder="Write your password"
+        required>
+      <span id="form-massage" class="text-warning font-semibold text-[18px] hidden">Your email or password is incorrect
+        !!!</span>
       <input class="btn btn-primary mt-4" type="submit" value="Login">
     </form>
   </main>
-  
+
   <!-- JavaScript -->
   <script src="js/script.js"></script>
 </body>
+
 </html>

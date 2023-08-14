@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,10 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <main>
-    <section class="mt-12 px-8 flex justify-center gap-6 flex-col sm:flex-row max-w-[1100px] mx-auto">
+    <section class="mt-12 md:mt-24 px-8 flex justify-center gap-6 flex-col sm:flex-row max-w-[1100px] mx-auto">
       <div class="w-full bg-rose-600 text-white flex flex-col gap-2 text-center p-6 rounded-lg">
         <span class="text-2xl font-semibold">Total Deposit</span>
         <span class="text-2xl font-semibold">$<span id="total-deposit">00</span></span>
@@ -27,20 +29,29 @@
 
     <section class="mt-12 px-8 py-12 bg-primary bg-opacity-5 ">
       <div class="flex flex-col sm:flex-row gap-12 max-w-[1100px] mx-auto">
-        <form id="add-deposit" class="flex flex-col gap-4 w-full">
-          <label for="deposit-amount" class="text-xl font-semibold">Add Balance</label>
-          <input class="input" type="number" name="deposit" id="deposit-amount">
+        <form id="deposit-form" class="flex flex-col gap-4 w-full">
+          <label for="deposit-amount" class="text-xl font-semibold">Add Balance $</label>
+          <input class="input" type="number" min="1" name="deposit" id="deposit-amount" placeholder="Enter the amount"
+            required>
+          <span id="deposit-success" class="text-primary font-semibold hidden">Deposit Successful !!!</span>
           <input class="btn btn-primary mt-4" type="submit" value="Add Balance">
         </form>
-        <form id="add-withdraw" class="flex flex-col gap-4 w-full">
-          <label for="withdraw-amount" class="text-xl font-semibold">Withdraw Balance</label>
-          <input class="input" type="number" name="withdraw-amount" id="withdraw-amount">
+        <form id="withdraw-form" class="flex flex-col gap-4 w-full">
+          <label for="withdraw-amount" class="text-xl font-semibold">Withdraw Balance $</label>
+          <input class="input" type="number" min="1" name="withdraw-amount" id="withdraw-amount"
+            placeholder="Enter the amount" required>
+          <span id="withdraw-success" class="text-primary font-semibold hidden">Withdraw Successful !!!</span>
+          <span id="insufficient-massage" class="text-[18px] text-warning font-semibold hidden">Insufficient Balance
+            !!!</span>
           <input class="btn btn-primary mt-4" type="submit" value="Withdraw Balance">
         </form>
       </div>
     </section>
+
+    <a href="index.html" class="btn btn-primary absolute left-1/2 -translate-x-1/2 mt-8">Logout</a>
   </main>
   <!-- JavaScript -->
   <script src="js/dashboard.js"></script>
 </body>
+
 </html>

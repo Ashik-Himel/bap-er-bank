@@ -5,16 +5,18 @@ const loginInfo = {
 
 const emailInput = document.getElementById("login-email");
 const passwordInput = document.getElementById("login-password");
-const formMassage = document.getElementById('form-massage');
+const formMassage = document.getElementById("form-massage");
 
 document.getElementById("form").addEventListener("submit", function (event) {
-  if (emailInput.value.toLowerCase() === loginInfo.email && passwordInput.value === loginInfo.password) {
+  if (
+    emailInput.value.toLowerCase() === loginInfo.email &&
+    passwordInput.value === loginInfo.password
+  ) {
     location.href = "dashboard.html";
-  }
-  else {
+  } else {
     passwordInput.value = "";
     formMassage.style.display = "block";
-    setTimeout(function() {
+    setTimeout(function () {
       formMassage.style.display = "none";
     }, 3000);
   }
